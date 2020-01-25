@@ -1,0 +1,15 @@
+{
+  "name": "vanilla-js-film",
+  "version": "1.0.0",
+  "description": "A sample project showing usage of some technologies",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Dariusz Wisniewski",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.8.3",
+    "@babel/core": "^7.8.3"
+  }
+}
