@@ -1,15 +1,32 @@
 {
   "name": "vanilla-js-film",
   "version": "1.0.0",
-  "description": "A sample project showing usage of some technologies",
+  "description": "A sample of usage of a few vanilla technologies",
   "main": "index.js",
-  "scripts": {
-    "test": "test"
-  },
-  "author": "Dariusz Wisniewski",
-  "license": "MIT",
+  "dependencies": {},
   "devDependencies": {
-    "@babel/cli": "^7.8.3",
-    "@babel/core": "^7.8.3"
-  }
+    "@babel/core": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
+    "babel-preset-env": "^1.7.0",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  },
+  "scripts": {
+    "build": "webpack --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/darekrn/vanilla-js-film.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/darekrn/vanilla-js-film/issues"
+  },
+  "homepage": "https://github.com/darekrn/vanilla-js-film#readme",
+  "type": "module"
 }
