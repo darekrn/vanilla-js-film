@@ -1,0 +1,48 @@
+* { 
+    margin: 0; 
+    padding: 0; 
+}
+
+/* input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid red;
+    border-radius: 4px;
+  } */
+
+.headerContainer {
+    height: 100px;
+    width: 100%;
+    background-color: blanchedalmond;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.textBoxContainer {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: center;
+    justify-self: center;
+}
+
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+  input.searchfilmsinput {
+    border: none;
+    font-size: 16px;
+    background-color: #4CAF50;
+    width: 100px;
+    height: 30px;
+}
