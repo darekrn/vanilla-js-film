@@ -10,6 +10,7 @@
 
 import HeaderView from './components/HeaderView'
 import PubSub from './pubsub.js'
+import FilmsGrid from './components/FilmsGrid';
 
 // class Header {
 //   constructor(element) {
@@ -28,6 +29,8 @@ import PubSub from './pubsub.js'
 const ps = new PubSub()
 const headerView = new HeaderView('header', ps)
 headerView.Render()
+const filmsgrid = new FilmsGrid('filmsGrid',ps)
+filmsgrid.Render()
 
 class Store {
   constructor() {
