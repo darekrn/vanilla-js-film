@@ -1,6 +1,10 @@
-export default class PublisherSubscriber {
+class PublisherSubscriber {
     constructor(){
-        this.events = {};
+        if(!PublisherSubscriber.instance) {
+            this.events = {};
+            PublisherSubscriber.instance = this
+        }
+        return PublisherSubscriber.instance;
     }
 
     subscribe(eventName, callback) {
@@ -33,6 +37,9 @@ export default class PublisherSubscriber {
             }
         }
     }
-
-    
 }
+
+const PublisherSubscriberInstance = new PublisherSubscriber();
+Object.freeze(PublisherSubscriberInstance);
+
+export default PublisherSubscriberInstance;
