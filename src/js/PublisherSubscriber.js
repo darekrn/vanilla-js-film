@@ -9,7 +9,7 @@ class PublisherSubscriber {
 
     subscribe(eventName, callback) {
         //If it is a new subscription create an empty array for the given event's type
-        if(this.events.hasOwnProperty(eventName)) {
+        if(!this.events.hasOwnProperty(eventName)) {
             this.events[eventName] = [];
         }
 
@@ -30,7 +30,7 @@ class PublisherSubscriber {
     }
 
     publish(eventName) {
-        const data = Array.slice.call(arguments, 1)
+        const data = Array.from(arguments).splice.call(arguments, 1)
         if(this.events.hasOwnProperty(eventName)) {
             for(let i = 0; i < this.events[eventName].length; i++) {
                 this.events[eventName][i].apply(this, data)

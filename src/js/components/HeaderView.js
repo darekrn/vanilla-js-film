@@ -1,10 +1,12 @@
+import PublisherSubscriber from './../PublisherSubscriber'
+
 export default class HeaderView {
     constructor(divToAttachTo,pubsub) {
         this.divToAttachTo2 = divToAttachTo
         this.pubsub2 = pubsub
     }
 
-    Render() {
+    Render(data) {
         const headerContainer = document.getElementById(this.divToAttachTo2);
         headerContainer.className = 'headerContainer'
 
@@ -15,8 +17,9 @@ export default class HeaderView {
         btn.className = 'button'
         btn.innerText = 'Search films'
         btn.addEventListener("click", function(){
-            //this.pubsub2.publish('search_films_button',btn,null)
-            alert('button pressed')
+            PublisherSubscriber.publish('search-films-button-clicked')
+            //this.pubsub2.publish('search-films-button-clicked')
+            //alert('button pressed')
           }); 
 
         headerContainer.appendChild(inputSearchFilms)
