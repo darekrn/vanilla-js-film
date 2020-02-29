@@ -11,10 +11,10 @@ import MainController from './controllers/MainController'
 const mainController = new MainController('header', 'filmsGrid')
 mainController.Render()
 
-class Store {
-  constructor() {
-    this.state = {}
-    this.actions = {}
-    this.mutations = {}
-  }
-}
+// class Store {
+//   constructor() {
+//     this.state = {}
+//     this.actions = {}
+//     this.mutations = {}
+//   }
+// }
