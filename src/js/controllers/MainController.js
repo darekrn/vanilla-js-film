@@ -16,9 +16,7 @@ export default class MainController {
         this.FilmsGrid.Render()
     }
     SearchFilmsButtonClicked = (filmTitle) => {
-        //console.log('search-films-button-clicked clicked: ' + filmTitle)
-        console.log(this)
-        //this.FilmsGrid.Render()
-        //this.model123.fetchFilmsAsync(filmTitle)
+        console.log('search-films-button-clicked clicked: ' + filmTitle)
+        this.Store.fetchFilmsAsync(filmTitle)
     }
 }

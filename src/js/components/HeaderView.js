@@ -4,6 +4,7 @@ export default class HeaderView {
     constructor(divToAttachTo,pubsub) {
         this.divToAttachTo2 = divToAttachTo
         this.pubsub2 = pubsub
+        //this.button = null
     }
 
     Render(data) {
@@ -16,8 +17,8 @@ export default class HeaderView {
         const btn = document.createElement("BUTTON")
         btn.className = 'button'
         btn.innerText = 'Search films'
-        btn.addEventListener("click", function(){
-            PublisherSubscriber.publish('search-films-button-clicked','Terminator')
+        btn.addEventListener("click", () => {
+            PublisherSubscriber.publish('search-films-button-clicked',inputSearchFilms.value)
           }); 
 
         headerContainer.appendChild(inputSearchFilms)
