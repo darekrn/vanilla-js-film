@@ -5,18 +5,15 @@ export default class Store123 {
       this.state = {
         films: []
       },
-      // this.actions = {},
-      // this.mutations = {},
-         this.api = '9b94c21c'
+      this.api = '9b94c21c'
     }
-    //actions
+
+    //ToDo: Make it async
     fetchFilmsAsync(filmTitle) {
       let respone = fetch(`http://www.omdbapi.com/?s=${filmTitle}&apikey=${this.api}`).then((response) => {
         return response.json();
       })
       .then((data) => {
-        //console.log(this)
-        //this.processFilmsResponse(data)
         return data
       })
       .then((data) => this.processFilmsResponse(data))
@@ -26,7 +23,6 @@ export default class Store123 {
     processFilmsResponse(data) {
       const result = [] 
       data.Search.map(film => result.push({ Poster: film.Poster, Title: film.Title, Type: film.Type, Year: film.Year, imdbID: film.imdbID }))
-      //this.films = result
       return result
     }
     changeFilmsList(newFilmsList) {
@@ -37,5 +33,3 @@ export default class Store123 {
       PublisherSubscriber.publish('films-list-updated', dataToBeSent)
     }
   }
-
-  //'Poster: film.Poster; Title: film.Title; Type: film.Type; Year: film.Year; imdbID: film.imdbID'

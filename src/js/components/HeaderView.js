@@ -4,7 +4,6 @@ export default class HeaderView {
     constructor(divToAttachTo,pubsub) {
         this.divToAttachTo2 = divToAttachTo
         this.pubsub2 = pubsub
-        //this.button = null
     }
 
     Render(data) {
