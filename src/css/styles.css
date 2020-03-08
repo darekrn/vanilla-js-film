@@ -10,33 +10,48 @@
     padding: 0; 
 }
 
+body {
+  background-image: url("./../resources/background.jpg");
+  background-repeat: repeat;
+}
+
 .headerContainer {
-    height: 100px;
+    height: 60px;
     width: 100%;
-    background-color: blanchedalmond;
+    background-color: #121212;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .button {
-    background-color: #4CAF50; /* Green */
+    background-color: whitesmoke; /* Green */
     border: none;
-    color: white;
+    color: black;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+  }
+
+  .button:hover {
+    border-width: 3px;
+    border-color: black;
+    
   }
 
   input.searchfilmsinput {
     border: none;
     font-size: 16px;
-    background-color: #4CAF50;
-    width: 250px;
+    background-color: whitesmoke;
+    width: 50%;
     height: 48px;
     margin: 0 10px;
+    border-radius: 8px;
 }
 
 .filmsGrid  {
