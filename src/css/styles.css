@@ -72,12 +72,13 @@
     list-style: none;
     margin: 0;
     padding: 0;
+    justify-content: center;
   }
   
   .cards__item {
     display: flex;
     padding: 1rem;
-    width: 18%; /* copied from below */
+    width: 300px; /* copied from below */
     height: 600px;
     /*@media(min-width: 40rem) {
       width: 50%;
@@ -171,7 +172,9 @@
     background-color: #008CBA;
     color: white;
     cursor: pointer;
-    /*border: 2px solid #008CBA; 
+    /*filter: contrast(70%);
+    filter: saturate(180%);
+    border: 2px solid #008CBA; 
     transition-duration: 0.4s*/
   }
   
